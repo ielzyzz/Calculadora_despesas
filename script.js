@@ -8,7 +8,6 @@ document.getElementById("btn").addEventListener('click', function () {
     const lista = document.getElementById('lista-produtos');
     const item = document.createElement('li');
 
-
     const textoItem = document.createElement('span');
     textoItem.textContent = `${nome} - R$ ${valor.toFixed(2)}`;
 
@@ -16,7 +15,6 @@ document.getElementById("btn").addEventListener('click', function () {
     btnRemover.textContent = "Remover";
     btnRemover.classList.add("remove-btn");
 
-   
     btnRemover.addEventListener('click', function () {
       lista.removeChild(item);
       saldo -= valor;
@@ -38,5 +36,32 @@ document.getElementById("btn").addEventListener('click', function () {
 });
 
 function atualizarSaldo() {
+  // Valor total 
   document.getElementById('saldo').textContent = saldo.toFixed(2);
+
+
+  const saldoDisponivelInput = document.getElementById('saldoDisponivel');
+  const saldoDisponivel = parseFloat(saldoDisponivelInput.value);
+
+  // saldo disponivel - total produtos
+  let restante = 0;
+  if (!isNaN(saldoDisponivel)) {
+    restante = saldoDisponivel - saldo;
+  }
+
+  // saldo restante
+  document.getElementById('saldoRestante').textContent = restante.toFixed(2);
+}
+
+    // mostrar a secao oculta
+function mostrarSecao(id) {
+  const secoes = document.querySelectorAll('.secao');
+
+  secoes.forEach(secao => {
+    if (secao.id === id) {
+      secao.classList.remove('escondido');
+    } else {
+      secao.classList.add('escondido');
+    }
+  });
 }

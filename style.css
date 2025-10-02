@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #4dbff3, #2b1969);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  background: rgb(20, 20, 20);
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 500px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f0eaea;
+}
+
+
+.input-todos {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-todos label {
+  margin-bottom: 5px;
+  color: #e2dddd;
+}
+
+.input-todos input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#btn {
+  padding: 10px;
+  background: linear-gradient(135deg, #4dbff3, #2b1969);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: ease 0.3s;
+}
+
+#btn:hover {
+  background-color: #0056b3;
+}
+
+#lista-produtos {
+  list-style: none;
+  padding: 0;
+}
+
+#lista-produtos li {
+  display: flex;
+  justify-content: space-between;
+  background: #fffafa;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 8px;
+  align-items: center;
+}
+
+.remove-btn {
+  background: oklab(48.252% 0.16377 0.08649);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: ease-in 0.6s;
+}
+
+.remove-btn:hover {
+  background: #c82333;
+  transform: scale(1.03);
+}
+
+h3 {
+  margin-top: 15px;
+  color: #f5f5f5;
+}

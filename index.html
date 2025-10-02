@@ -1,43 +1,111 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+<head>  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="style.css" />
   <title>Calculadora de Despesas</title>
 </head>
-<body>
-  <nav class="sobre">
-    <a href="#"></a>
-    <a href="#"></a>
-    <a href="#"></a>
-  </nav>
+<body>     
 
-  <div class="container">
-    <h1>Sua Calculadora de Despesas</h1>
-    
-    <div id="input-box">
-      <div class="input-todos">
-        <label for="text">Nome do Produto</label>
-        <input type="text" id="text" placeholder="Nome do Produto" />
-      </div>
 
-      <div class="input-todos">
-        <label for="value">Valor do Produto</label>
-        <input type="number" id="value" placeholder="Valor do Produto" />
-      </div>
+  <header class="header">
+    <button onclick="mostrarSecao('calculadora')">Calculadora</button>
+    <button onclick="mostrarSecao('sobre')">Sobre</button>
+  </header>
 
-      <button id="btn">Adicionar Produto</button>
+  <!-- CALCULADORA -->
+  <section id="calculadora" class="secao">
+    <div class="container">
+                    <div class="horizontal">
+    <div class="esquerda">
+        <h1>Sua Calculadora de Despesas</h1>
+      
+      <div id="input-box">
 
-    <h3>Os Itens:</h3>
-        <div class="scroll">
-            <ul id="lista-produtos"></ul>
+        <div class="input-todos">
+          <label for="saldoDisponivel">Saldo Disponível</label>
+          <input type="number" id="saldoDisponivel" placeholder="Digite seu saldo disponível" />
         </div>
 
+        <div class="input-todos">
+          <label for="text">Nome do Produto</label>
+          <input type="text" id="text" placeholder="Nome do Produto" />
+        </div>
 
-      <h3>Valor Total: R$ <span id="saldo">0.00</span></h3>
+        <div class="input-todos">
+          <label for="value">Valor do Produto</label>
+          <input type="number" id="value" placeholder="Valor do Produto" />
+        </div>
+
+        <button id="btn">Adicionar Produto</button>
+        </div>
+
+    </div>
+
+    <div class="direita">
+        <h3>Os Itens:</h3>
+        <div class="scroll">
+          <ul id="lista-produtos"></ul>
+        </div>
+
+        <h3>Valor Total: R$ <span id="saldo">0.00</span></h3>
+        <h3>Saldo Restante: R$ <span id="saldoRestante">0.00</span></h3>
+    </div>
+
+                  
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SOBRE OCULTA -->
+<section id="sobre" class="secao escondido">
+  <div class="container sobre-container">
+    <h2>Sobre o Projeto</h2>
+
+    <p class="descricao">
+      Esta aplicação foi desenvolvida com o objetivo de ajudar pessoas a organizarem suas despesas de forma simples e prática.
+      Você pode adicionar produtos, ver o valor total gasto e ainda comparar com o seu saldo disponível. Tudo em tempo real!
+    </p>
+
+    <h3>Integrantes do Projeto</h3>
+    <div class="integrantes">
+
+      <div class="integrante">
+        <h4>Nome do Integrante 1</h4>
+        <p>Responsável por: [Função ou tarefa realizada]</p>
+      </div>
+
+      <div class="integrante">
+        <h4>Nome do Integrante 2</h4>
+        <p>Responsável por: [Função ou tarefa realizada]</p>
+      </div>
+
+      <div class="integrante">
+        <h4>Nome do Integrante 3</h4>
+        <p>Responsável por: [Função ou tarefa realizada]</p>
+      </div>
+
+      <div class="integrante">
+        <h4>Nome do Integrante 4</h4>
+        <p>Responsável por: [Função ou tarefa realizada]</p>
+      </div>
+
+      <div class="integrante">
+        <h4>Nome do Integrante 5</h4>
+        <p>Responsável por: [Função ou tarefa realizada]</p>
+      </div>
+
     </div>
   </div>
+</section>
+
+
+
+
+  </section>
 
   <script src="script.js"></script>
 </body>
